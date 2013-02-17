@@ -1,0 +1,19 @@
+/* ==========================================================================
+   
+   $MEDIA QUIERIES
+   
+   ========================================================================== */
+
+/**
+ * This media query is based on nothing right now
+ * This is simply to show the main navigation *will* change
+ */
+
+@media screen and (min-width: 30em) { /* this width is arbitrary */
+    .container {
+      padding-left: 2em;
+      padding-right: 2em;
+      padding-top: 1em;
+      margin-top: 2em;
+    }
+}/* end 30em media query */

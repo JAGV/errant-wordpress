@@ -1,0 +1,143 @@
+/* ==========================================================================
+   
+   $TYPOGRAPHY
+   
+   ========================================================================== */
+
+/**
+ * Basic Header Spacing
+ */
+ h1:first-child, h2:first-child,
+ h3:first-child, h4:first-child,
+ h5:first-child, h6:first-child {
+  margin-top: 0;
+ }
+
+ h1, h2 {
+  line-height: 1.2;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+  font-family: $brand-primary-face;
+  margin-bottom: 0.5em;
+ }
+
+ p {
+  margin-top: 0;
+  margin-bottom: 0;
+ }
+
+ p+p {
+  text-indent: $spacing-unit;
+ }
+ 
+ .main-nav {
+    font-family: $brand-primary-face;
+    text-align: center;
+    font-size: 1.125em;
+ }
+
+ .social-nav {
+    text-align: right;
+  }
+
+/**
+ * Paragraph Basics
+ */
+
+/**
+ * Post Styles
+ */
+ .post h2 {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+ }
+
+ .post-date {
+    margin-top: $half-spacing-unit;
+    margin-bottom: 0;
+ }
+
+ .excerpt {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.4;
+ }
+
+ .home--blog-roll {
+    text-align: center;
+
+    .post:after {
+      color: $light-grey;
+      content: ". . .";
+    }
+
+    .post--hero:after {
+        font-size: 180%;
+        content: "\2235";
+    }
+
+ }
+
+
+/**
+ * Article Title
+ */
+ .article__title {
+    text-align: center;
+    font-size: 120%;
+ }
+
+ .article-author {
+    font-weight: normal;
+ }
+
+ .article-name, .article-author {
+    margin-bottom: 0;
+    margin-top: 0;
+ }
+
+.article__body > p:last-child:after {
+  color: $brand-secondary;
+  content: " \2766"
+ }
+
+.light-headline {
+  color: $light-grey;
+  font-weight: normal;
+}
+
+.post-date {
+  font-style: italic;
+}
+
+
+.category-list {
+  font-size: 80%;
+}
+
+/**
+ * Share title
+ */
+ .share-page {
+  text-align: center;
+ }
+ .share-page h4 {
+    margin-bottom: 0;
+ }
+ .social-icons li a {
+  color: $brand-color;
+  
+    &:hover {
+      color: $brand-secondary;
+    }
+ }
+
+blockquote {
+  font-style: italic;
+  font-size: 1.4em;
+  border-left: 5px solid $light-grey;
+  margin-left: 0;
+  padding-left: $spacing-unit;
+
+}

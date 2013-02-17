@@ -1,0 +1,124 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   
+   $BASE STYLES: OPINIONATED DEFAULTS
+   
+   ========================================================================== */
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: lighten($brand-color, 10%);
+    font-family: $brand-secondary-face;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+/**
+ * Added by Grey Vaisius
+ * Sets link underlines to be border bottom
+ * so they won't cut off descenders
+ */
+
+ a {
+    @include transition(all 0.75s);
+    text-decoration: none;
+    border-bottom: 1px solid;
+    color: $brand-secondary;
+ }
+ a:hover {
+    border-bottom-color: transparent;
+    color: $brand-color;
+ }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: $brand-secondary;
+    color: $rev;
+    text-shadow: none;
+}
+
+::selection {
+    background: $brand-secondary;
+    color: $rev;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $light-grey;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+
+    /**
+     * Added by Grey Vaisius
+     * These are to accomodate responsive design
+     */
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/**
+ * Chrome Frame Prompt  
+ */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: $brand-color;
+    color: #000;
+    padding: 0.2em 0;
+}

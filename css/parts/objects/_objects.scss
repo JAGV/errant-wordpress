@@ -1,0 +1,77 @@
+/* ==========================================================================
+   
+   $OBJECTS
+
+   ========================================================================== */
+
+/**
+ * Generic Navigation styles
+ */
+
+.nav {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+}
+.nav > li, .nav > a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.nav a {
+    border-bottom: none;
+}
+
+.social-icons {
+    margin-top: $half-spacing-unit;
+    margin-bottom: $spacing-unit;
+    
+    li a {
+        font-family: $icon-font;
+        margin-top: 0.75em;
+        font-size: 1em;
+    }
+}
+
+
+/**
+ * `.nav-stacked` extends `.nav`, stacks the navigation list
+ *
+ */
+.nav--stacked > li {
+    display: list-item;
+}
+.nav--stacked > li > a {
+    display: block;
+}
+
+/**
+ * Social Icons
+ */
+
+ .social-icons {
+    font-family: $icon-font;
+    line-height: 1;
+ }
+
+
+/**
+ * Blog Objects
+ */
+ .blog-roll {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .post {
+    padding-bottom: 0.75em;
+    margin-bottom: $spacing-unit;
+    z-index: 1;
+  }
+
+  .post--hero {
+    margin-bottom: 2em;
+  }
+
+ 

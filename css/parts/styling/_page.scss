@@ -1,0 +1,112 @@
+/**
+ * Container
+ */
+ html {
+  background-color: 
+    lighten($light-grey, 20%);
+ }
+
+ .container {
+    border: 1px solid $light-grey;
+    background: $rev;
+ }
+
+/**
+ * Header
+ */
+ .header .main-nav {
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $brand-color;
+  }
+
+ .logo img {
+    @include transition(all 0.75s);
+    opacity: 1;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+/**
+ * Style Helpers
+ */
+  .bottom-shadow {
+    @include box-shadow(0 8px 6px -6px $light-grey);
+  }
+  .round-thumb {
+    opacity: 0.6;
+    //overflow: hidden;
+
+    @include transition(all 0.5s);
+    @include border-radius(50em);
+  }
+
+  .post:hover .round-thumb {
+    opacity: 1;
+  }
+
+  .post--hero {
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .post__meta {
+    background-color: $rev;
+  }
+
+  .post--in-category {
+    border-bottom: 1px solid $light-grey;
+  }
+
+  /**
+   * Experimental Cropping for thumbnails
+   */
+
+  .thumbnail-holder {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  .post--hero .thumbnail-holder {
+    padding-top: 50%;
+  }
+
+  .thumbnail-holder a > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    margin-left: -500px;
+    margin-top: -250px;
+
+    max-width: 1000px;
+    width: 1000px;
+    height: auto;
+
+    opacity: 0.6;
+
+    @include transition(opacity 0.75s);
+  }
+
+  .post--hero .thumbnail-holder a > img {
+    opacity: 1;
+  }
+
+  .post:hover img {
+    opacity: 1;
+  }
+
+  .thumbnail-holder--round {
+    @include border-radius(200%);
+  }
+
+
+/**
+ * Footer
+ */
+ .footer .main-nav {
+    border-top: 1px solid $brand-color;
+    border-bottom: 1px solid $light-grey;
+  }

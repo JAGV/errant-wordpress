@@ -1,0 +1,11 @@
+/**
+ * Article styles
+ */
+
+ .share-page {
+    @include transition(all 0.75s);
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+ }

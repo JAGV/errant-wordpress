@@ -1,0 +1,58 @@
+// Main Sass file, preparing for the possiblity of a switch to Sass
+
+
+/* ==========================================================================
+   
+   $CONTENTS
+   
+   ========================================================================== */
+/**
+ * CONTENTS..............This is it +_+
+ * NORMALIZE.............Normalize.css by Nicolas Gallagher http://necolas.github.com/normalize.css/
+ * BASE STYLES...........Base styles included with H5BP https://github.com/h5bp/html5-boilerplate
+ * VARIABLES.............Sass variables used throughout the site
+ * ALM VAISIUS...........Custom styles written by Justin Alm and Grey Vaisius
+ *
+ * OBJECTS...............Base elements that are super resuable
+ *
+ * STRUCTURE.............The layout of page elements
+ * TYPOGRAPHY............The structural typography that builds the page, rythm
+ *
+ * STYLING...............The styling of all the page elements
+ *
+ * HELPER CLASSES........Classes to help with layouts, part of H5BP
+ */
+
+// Compass Parts
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+
+// Base and Normalize
+@import 'parts/normalize';
+@import 'parts/objects/font-face';
+@import 'parts/vars';
+@import 'parts/base';
+
+// Objects
+@import 'parts/objects/objects';
+
+// Structure
+@import 'parts/structure/set-grid';
+@import 'parts/structure/structure';
+@import 'parts/structure/breakpoint-1';
+@import 'parts/structure/breakpoint-2';
+@import 'parts/structure/breakpoint-3';
+
+// Styling
+@import 'parts/styling/typography';
+@import 'parts/styling/page';
+@import 'parts/styling/article';
+
+// Helper Classes
+@import 'parts/helper-classes';
+
+
+
+

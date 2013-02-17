@@ -1,0 +1,30 @@
+/**
+ * This media query is based on nothing right now
+ * This is simply to show the main navigation *will* change
+ */
+
+@media screen and (min-width: 48em) { /* this width is arbitrary */
+    
+    .article__title {
+      position: relative;
+      max-width: 40em;
+      padding-top: 2em;
+      padding-left: 2em;
+      padding-right: 2em;
+      margin-top: -3em;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: $rev;
+
+      .article-name {
+        border-top: 1px solid;  
+        padding-top: $half-spacing-unit;
+      }
+      
+      .post-date {
+        border-bottom: 1px solid;
+        padding-bottom: $half-spacing-unit;
+      }
+    }
+
+}/* end 60em media query */
