@@ -15,15 +15,34 @@
 
 <div class="article  full-width">
     
-    <?php the_post_thumbnail(); ?>
+    
 
     <div class="article__title">
+        
+    <?php the_post_thumbnail(); ?>
+    
+        
+    <p class="post-date"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'j M Y' ); ?></time></p>
+    
     <h1 class="article-name"><?php the_title(); ?></h1>
     
-    <h2 class="article-author"><?php the_author(); ?></h2>
+    <h2 class="article-author">
+                
+        <?php
+            echo get_post_meta($post->ID, 'author', true);
+        ?>
+        
+    </h2>
     
-    <p class="post-date"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'j M Y' ); ?></time></p>
     </div><!-- .article-title -->
+    
+    <div class="share-page">
+    <h4>Share this piece</h4>
+        <ul class="nav  social-icons">
+        <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" alt="Facebook">&#62992;</a></li>
+        <li><a href="http://twitter.com/share" data-count="horizontal" data-via="SEOHolistically" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" title="Tweet this" target="_blank">&#62993;</a></li>
+        </ul><!-- .social-nav -->
+    </div><!-- .share-page -->
    
     <div class="article__body">
         
@@ -31,15 +50,17 @@
         
     </div><!-- .article__body -->
     
-    <?php // if ( get_the_author_meta( 'description' ) ) : ?>
-    <?php // echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-    <!--<h3>About <?php // echo get_the_author() ; ?></h3>-->
-    <?php // the_author_meta( 'description' ); ?>
-    <?php // endif; ?>
+    <div class="share-page">
+    <h4>Share this piece</h4>
+        <ul class="nav  social-icons">
+        <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" alt="Facebook">&#62992;</a></li>
+        <li><a href="http://twitter.com/share" data-count="horizontal" data-via="SEOHolistically" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" title="Tweet this" target="_blank">&#62993;</a></li>
+        </ul><!-- .social-nav -->
+    </div><!-- .share-page -->
 
 </div><!-- .article -->
 
 <?php endwhile; ?>
 
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/latest-loop','parts/shared/footer','parts/shared/html-footer') ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/media/latest-loop','parts/shared/footer','parts/shared/html-footer') ); ?>
 

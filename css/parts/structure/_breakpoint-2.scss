@@ -6,25 +6,24 @@
 @media screen and (min-width: 48em) { /* this width is arbitrary */
     
     .article__title {
-      position: relative;
-      max-width: 40em;
-      padding-top: 2em;
-      padding-left: 2em;
-      padding-right: 2em;
-      margin-top: -3em;
-      margin-right: auto;
-      margin-left: auto;
-      background-color: $rev;
+        font-size: 120%;
+        //margin-top: $spacing-unit;
+        
 
-      .article-name {
-        border-top: 1px solid;  
-        padding-top: $half-spacing-unit;
-      }
-      
-      .post-date {
-        border-bottom: 1px solid;
-        padding-bottom: $half-spacing-unit;
-      }
+        background-color: $rev;
+        //border-bottom: 1px solid $light-grey;
+        //border-top: 1px solid;  
     }
+
+
+    .post--hero {
+      margin-bottom: 2em;
+
+        .post__meta {
+            font-size: 120%;
+        }
+    }
+
+
 
 }/* end 60em media query */

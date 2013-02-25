@@ -2,8 +2,7 @@
  * Container
  */
  html {
-  background-color: 
-    lighten($light-grey, 20%);
+  background-color: lighten($light-grey, 20%);
  }
 
  .container {
@@ -11,9 +10,12 @@
     background: $rev;
  }
 
+
+
 /**
  * Header
  */
+
  .header .main-nav {
     border-top: 1px solid $light-grey;
     border-bottom: 1px solid $brand-color;
@@ -27,80 +29,62 @@
     }
   }
 
+
+
 /**
  * Style Helpers
  */
+
   .bottom-shadow {
     @include box-shadow(0 8px 6px -6px $light-grey);
   }
+
+  /**
+   * Various failed children
+   
   .round-thumb {
-    opacity: 0.6;
-    //overflow: hidden;
+    //opacity: 0.6;
 
     @include transition(all 0.5s);
     @include border-radius(50em);
   }
 
-  .post:hover .round-thumb {
-    opacity: 1;
+
+  .thumbnail-holder {
+    opacity: 0.4;
+    @include transition(all 0.5s);
   }
+
+  .post:hover .thumbnail-holder {
+      //opacity: 1;
+  }
+
+  .post:hover .post__meta {
+    opacity: 0.4;
+  }
+  **/
 
   .post--hero {
     border-bottom: 1px solid $light-grey;
   }
 
   .post__meta {
-    background-color: $rev;
+    background: #FFF;
   }
 
   .post--in-category {
     border-bottom: 1px solid $light-grey;
   }
 
-  /**
-   * Experimental Cropping for thumbnails
-   */
 
-  .thumbnail-holder {
-    overflow: hidden;
-    width: 100%;
-    padding-top: 100%;
-    text-align: center;
-    position: relative;
+.nav__catalogue .post {
+  border-bottom: 1px solid $light-grey;
+
+  &:first-child {
+    border-top: 1px solid $brand-color;
   }
+}
 
-  .post--hero .thumbnail-holder {
-    padding-top: 50%;
-  }
-
-  .thumbnail-holder a > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    margin-left: -500px;
-    margin-top: -250px;
-
-    max-width: 1000px;
-    width: 1000px;
-    height: auto;
-
-    opacity: 0.6;
-
-    @include transition(opacity 0.75s);
-  }
-
-  .post--hero .thumbnail-holder a > img {
-    opacity: 1;
-  }
-
-  .post:hover img {
-    opacity: 1;
-  }
-
-  .thumbnail-holder--round {
-    @include border-radius(200%);
-  }
 
 
 /**

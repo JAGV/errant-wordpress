@@ -22,7 +22,6 @@
 
 <div class="article__body  full-width">
     
-<h2><?php// the_title(); ?></h2>
     <?php the_content(); ?>
     
 </div><!-- .article -->

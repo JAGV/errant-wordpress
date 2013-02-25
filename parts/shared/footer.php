@@ -3,7 +3,9 @@
      <div class="grid-wrap">
          
         <div class="grid-col">
+        
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav  main-nav  clearfix' ) ); ?>
+        
         </div><!-- .grid-col -->
         
 		<div class="grid-col">

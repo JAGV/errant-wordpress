@@ -7,7 +7,6 @@
 /**
  * Generic Navigation styles
  */
-
 .nav {
     list-style: none;
     margin-left: 0;
@@ -39,39 +38,152 @@
  * `.nav-stacked` extends `.nav`, stacks the navigation list
  *
  */
+
 .nav--stacked > li {
-    display: list-item;
+  display: list-item;
 }
 .nav--stacked > li > a {
-    display: block;
+  display: block;
 }
+
+
+/**
+ * Center aligned nav
+ */
+
+.nav__catalogue {
+  text-align: center;
+}
+
 
 /**
  * Social Icons
  */
 
- .social-icons {
-    font-family: $icon-font;
-    line-height: 1;
- }
+.social-icons {
+  font-family: $icon-font;
+  line-height: 1;
+}
+
+
+/**
+ * Share Page
+ */
+
+.share-page {
+  @include transition(all 0.75s);
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
 
 
 /**
  * Blog Objects
  */
- .blog-roll {
+
+.blog-roll {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.post {
+  position: relative;
+  //padding-bottom: 0.75em;
+  margin-bottom: $spacing-unit;
+  //z-index: 1;
+
+  overflow: hidden;
+}
+
+.post__meta {
+  /** 
+  * This prevents the unsightly misalignment caused by rounding errors 
+  */
+  width: 100.5%;
+  //position: absolute;
+  //top: 0;
+  position: relative;
+  margin-top: -2em;
+  //padding: $half-spacing-unit;
+
+  background-color: $rev;
+  opacity: 1;
+
+  //z-index: 2;
+
+  @include transition(all 0.75s);
+}
+
+.post:hover .post__meta {
+  margin-top: -1.25em;
+}
+
+.post--hero:hover .post__meta {
+  margin-top: 0;
+}
+
+.post--hero {
+  margin-bottom: 2em;
+  text-align: center;
+
+  border: 1px solid $light-grey;
+
+  .post__meta {
+    position: relative;
+    padding-top: 0;
     margin-top: 0;
-    margin-bottom: 0;
   }
 
-  .post {
-    padding-bottom: 0.75em;
-    margin-bottom: $spacing-unit;
-    z-index: 1;
+  .thumbnail-holder {
+    //margin-bottom: 2em;
+    opacity: 1;
   }
 
-  .post--hero {
-    margin-bottom: 2em;
-  }
+  &:after {
 
- 
+  }
+}
+
+
+/**
+* Experimental Cropping for thumbnails
+ */
+
+.thumbnail-holder {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.thumbnail-holder a > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  margin-left: -500px;
+  margin-top: -250px;
+
+  max-width: 1000px;
+  //width: 1000px;
+  height: auto;
+
+  opacity: 0.6;
+
+  @include transition(opacity 0.75s);
+}
+
+.post--hero .thumbnail-holder a > img {
+  opacity: 1;
+}
+
+.post:hover img {
+  opacity: 1;
+}
+
+.thumbnail-holder--round {
+  @include border-radius(200%);
+}

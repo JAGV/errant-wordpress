@@ -24,6 +24,7 @@
  */
 
 // Compass Parts
+@import "susy";
 @import "compass/css3/transition";
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
@@ -50,8 +51,10 @@
 @import 'parts/styling/page';
 @import 'parts/styling/article';
 
+
 // Helper Classes
 @import 'parts/helper-classes';
+@import 'parts/styling/fancybox';
 
 
 

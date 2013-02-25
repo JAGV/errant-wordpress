@@ -59,30 +59,6 @@
     margin-bottom: $half-spacing-unit;
  }
 
- /**
-  * Blog Roll
-  */
-  .post__meta {
-    position: relative;
-    padding-top: $half-spacing-unit;
-    padding-bottom: $spacing-unit;
-    margin-top: -2em;
-    margin-left: auto;
-    margin-right: auto;
-
-    z-index: 2;
-
-    @include transition(all 0.75s);
-  }
-
-  .post:hover .post__meta {
-    margin-top: -1.25em;
-  }
-
-  .post--hero .post__meta {
-    max-width: 40em;
-  }
-
   
   /**
    * We should regulate images through templates not stretching
@@ -95,33 +71,6 @@
 
    *
    **/
-
-  
-/**
- * Article
- */
-
- .article__title {
-    position: relative;
-    padding-top: $spacing-unit;
- }
-
- .article__body {
-    max-width: 40em;
-    margin: $spacing-unit auto 0 auto;
- }
-
-.article__photo-body {
-  text-align: center;
-}
-
-.article__photo-body img {
-  margin-bottom: $spacing-unit;
-}
-
- .share-page {
-    margin-top: $spacing-unit;
- }
 
 
  /**

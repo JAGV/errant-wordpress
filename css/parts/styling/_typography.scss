@@ -48,11 +48,6 @@
 /**
  * Post Styles
  */
- .post h2 {
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
- }
-
  .post-date {
     margin-top: $half-spacing-unit;
     margin-bottom: 0;
@@ -66,15 +61,18 @@
 
  .home--blog-roll {
     text-align: center;
-
+    
     .post:after {
+      text-align: center;
       color: $light-grey;
       content: ". . .";
     }
-
+    
     .post--hero:after {
         font-size: 180%;
-        content: "\2235";
+
+        color: $light-grey;
+        content: none /* "\2235" */;
     }
 
  }
@@ -85,7 +83,6 @@
  */
  .article__title {
     text-align: center;
-    font-size: 120%;
  }
 
  .article-author {
@@ -111,9 +108,21 @@
   font-style: italic;
 }
 
-
 .category-list {
   font-size: 80%;
+}
+
+.see-category {
+  margin-bottom: 5em;
+}
+
+.category-title {
+  font-weight: normal;
+  text-align: center;
+
+  span {
+    color: $light-grey;
+  }
 }
 
 /**
@@ -141,3 +150,4 @@ blockquote {
   padding-left: $spacing-unit;
 
 }
+
