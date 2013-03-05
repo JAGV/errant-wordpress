@@ -12,3 +12,10 @@
     ?>
     
 </h2>
+
+<p class="categories">
+    
+    in: 
+    <?php echo get_the_category_list( ', ' ); ?>
+    
+</p>

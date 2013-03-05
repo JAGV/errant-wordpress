@@ -60,7 +60,7 @@ $categories=get_categories($cat_args);
           <?php
         } // foreach($posts
       } // if ($posts
-        echo '<p class="see-category"><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>See all »,</a></p>';
+        echo '<p class="see-category"><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>See all »</a></p>';
         // close the list
         echo '</ul><!-- .nav -->';
     } // foreach($categories

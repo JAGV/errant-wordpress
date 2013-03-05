@@ -16,83 +16,87 @@
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<div class="grid-wrap">
-    
-<ul class="blog-roll  nav  nav--stacked  home--blog-roll">
+
+<!-- opens and closes a div every 3 posts -->
 
 <?php
-global $query_string;
-parse_str( $query_string, $args );
-if(is_home()){
-    $args['posts_per_page'] = 4;
-    query_posts($args);
-}else{
-    $args['posts_per_page'] = 9;
-    query_posts($args);
-}
-
-/**
-
-http://wordpress.stackexchange.com/questions/12262/how-to-customize-number-of-blog-posts-on-first-page
-
-    global $query_string;
-    parse_str( $query_string, $args );
-    if(is_home() || is_front_page()){
-        $args['posts_per_page'] = 3;
-        query_posts($args);
-    }else{
-        $args['posts_per_page'] = 9;
-        query_posts($args);  
-**/
-
+// Sets the counter at 1
+$counter = 1;
 ?>
 
-<?php if (have_posts()) : ?>
-    
-    <?php $post = $posts[0]; $c=0;?>
-    <?php while (have_posts() && $c < 4 ) : the_post(); ?>
+<ul class="blog-roll  nav  nav--stacked  home--blog-roll">
 
-    <?php $c++; if( !$paged && $c == 1) :?>
+<!-- opens a div grid-wrap -->
+<?php echo '<div class="grid-wrap">'; ?>
+
+<!-- begins the loop -->
+<?php
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    $custom_query = new WP_Query('posts_per_page=9&offset=4&paged=$paged');
+    
+    /**
+    $page = get_query_var('paged');
+    $page - (!empty($page) ? $page : 1);
+    $args = array(
+        'paged' => $page,
+        'posts_per_page' => 9,
+        'offset' => 4,
+    );
+
+
+    query_posts( $args );
+    **/
+    if (have_posts() ) : while ($custom_query->have_posts() ) : $custom_query-> the_post(); 
+?>
+    
+    <!-- displays a post -->
+    <div class="grid-col  bp2-col-one-third">
         
-        <div class="grid-col">
-        
-        <div class="post  post--hero">
-        
-            <?php Starkers_Utilities::get_template_parts( array('parts/media/media-object') ); ?>
+        <li class="post">
             
-            <?php // the_excerpt(); ?>
-        
-        </div><!-- .post -->
-        
-        </div><!-- .grid-col -->
-
-    <?php else :?>
-    
-        <div class="grid-col  bp2-col-one-third">
-        
-            <li class="post">
-                
-                <?php Starkers_Utilities::get_template_parts( array('parts/media/media-object--round') ); ?>
-                
-            </li><!-- .post -->
+            <?php Starkers_Utilities::get_template_parts( array('parts/media/media-object--round') ); ?>
             
-        </div><!-- .grid-col -->
-    
-    <?php endif;?>
-
-    <?php endwhile; ?>
-    
-    <div class="grid-col">
-        <p><?php next_posts_link(); ?></p>
-        <p><?php previous_posts_link(); ?></p>
+        </li><!-- .post -->
+            
     </div><!-- .grid-col -->
+     
     
-    <?php endif; ?>
+    <?php 
+        // if the counter is divided by 3 and has no remainder
+        if($counter % 3 == 0) {
+
+            // Close a div and open another div
+            echo '</div><div class="grid-wrap">';
+    } ?>
 
 
-    
+<?php 
+    // add to the counter
+    $counter++;
+
+    // close the while loop and if statement
+
+    endwhile; 
+?>
+
+<?php // wp_reset_postdata(); // reset the query ?>
+
+<div class="grid-col">
+    <p><?php next_posts_link(); ?></p>
+    <p><?php previous_posts_link(); ?></p>
+</div><!-- .grid-col -->
+
+<?php else : ?>
+
+<h2>No Posts to be found :(</h2>
+
+<?php endif; ?>
+
+<!-- close the final div -->
+<?php echo '</div><!-- .grid-wrap -->'; ?>
 </ul><!-- .blog-roll -->
-</div><!-- .grid-wrap -->
+    
+
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
 
