@@ -128,8 +128,6 @@
   margin-bottom: 2em;
   text-align: center;
 
-  border: 1px solid $light-grey;
-
   .post__meta {
     position: relative;
     padding-top: 0;
@@ -155,7 +153,8 @@
   overflow: hidden;
   width: 100%;
   padding-top: 100%;
-  text-align: center;
+  //text-align: center;
+  //text-align: center;
   position: relative;
 }
 
@@ -185,5 +184,5 @@
 }
 
 .thumbnail-holder--round {
-  @include border-radius(200%);
+    //@include border-radius(200%);
 }

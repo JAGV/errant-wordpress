@@ -7,6 +7,8 @@
     ?>
     </a>
 </div><!-- .thumbnail-holder--round -->
+
+
 <div class="post__meta">
     
     <?php Starkers_Utilities::get_template_parts( array( 'parts/media/media-meta' ) ); ?>

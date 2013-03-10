@@ -4,7 +4,6 @@
 		// Your JavaScript goes here
 
         $("a.myfancybox").fancybox({
-            
             openEffect: 'fade',
             nextEffect: 'fade',
             prevEffect: 'fade',
@@ -20,6 +19,8 @@
                         height: 50
                     }
             }
-        });
+        }); // close fancybox
 
-	});
+        $(".article__body").fitVids();
+
+	}); // close jQuery

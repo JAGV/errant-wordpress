@@ -20,6 +20,42 @@
 
     .post--hero .thumbnail-holder {
         padding-top: 50%;
+
+        @include transition(all 1s);
+    }
+
+    .post--hero {
+      position: relative;
+
+      padding-bottom: 3em;
+
+      margin-bottom: 3em;
+    }
+
+    .post--hero .post__meta {
+      width: auto;
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+      margin-top: -83px;
+
+      opacity: 0.4;
+
+      background-color: transparent;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+    }
+
+    .post--hero:hover .post__meta {
+      margin-top: -83px;
+
+      opacity: 1;
+      //background-color: rgba(255,255,255,0.8);
+    }
+
+    .post--hero:hover .thumbnail-holder {
+      opacity: 0.2;
     }
 
 

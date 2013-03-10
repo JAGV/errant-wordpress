@@ -105,7 +105,7 @@ http://wordpress.stackexchange.com/questions/12262/how-to-customize-number-of-bl
 </ul><!-- .blog-roll -->
 </div><!-- .grid-wrap -->
 
-<h3><a href="<?php bloginfo('url'); ?>/posts/">See all the articles</a></h3>
+<h3 class="align-center"><a href="<?php bloginfo('url'); ?>/posts/">See all articles</a></h3>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
 

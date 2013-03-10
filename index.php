@@ -17,22 +17,20 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 
-<!-- opens and closes a div every 3 posts -->
-
-<?php
-// Sets the counter at 1
-$counter = 1;
-?>
-
 <ul class="blog-roll  nav  nav--stacked  home--blog-roll">
 
 <!-- opens a div grid-wrap -->
-<?php echo '<div class="grid-wrap">'; ?>
+<div class="grid-wrap">
 
 <!-- begins the loop -->
 <?php
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    $custom_query = new WP_Query('posts_per_page=9&offset=4&paged=$paged');
+
+
+    $counter = 1;
+
+    //query_posts('offset=4');
+    //$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    //$custom_query = new WP_Query('posts_per_page=9&offset=4');
     
     /**
     $page = get_query_var('paged');
@@ -43,10 +41,11 @@ $counter = 1;
         'offset' => 4,
     );
 
-
     query_posts( $args );
+
     **/
-    if (have_posts() ) : while ($custom_query->have_posts() ) : $custom_query-> the_post(); 
+
+    if (have_posts() ) : while (have_posts() ) : the_post(); 
 ?>
     
     <!-- displays a post -->
@@ -73,27 +72,26 @@ $counter = 1;
 <?php 
     // add to the counter
     $counter++;
-
-    // close the while loop and if statement
-
+    // close the while loop
     endwhile; 
 ?>
 
 <?php // wp_reset_postdata(); // reset the query ?>
 
-<div class="grid-col">
-    <p><?php next_posts_link(); ?></p>
-    <p><?php previous_posts_link(); ?></p>
-</div><!-- .grid-col -->
+    <div class="grid-col">
+        <p class="align-center"><?php next_posts_link(); ?></p>
+        <p class="align-center"><?php previous_posts_link(); ?></p>
+    </div><!-- .grid-col -->
 
 <?php else : ?>
 
-<h2>No Posts to be found :(</h2>
+    <h2>No Posts to be found :(</h2>
 
-<?php endif; ?>
+<!-- close the if statement -->
+<?php endif; wp_reset_query(); ?>
 
-<!-- close the final div -->
-<?php echo '</div><!-- .grid-wrap -->'; ?>
+
+</div><!-- .grid-wrap -->
 </ul><!-- .blog-roll -->
     
 

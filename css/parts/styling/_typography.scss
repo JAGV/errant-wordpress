@@ -60,7 +60,7 @@
  }
 
  .home--blog-roll {
-    text-align: center;
+    //text-align: center;
     
     .post:after {
       text-align: center;
@@ -149,5 +149,10 @@ blockquote {
   margin-left: 0;
   padding-left: $spacing-unit;
 
+}
+
+
+.align-center {
+  text-align: center;
 }
 
