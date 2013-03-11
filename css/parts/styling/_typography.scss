@@ -60,7 +60,7 @@
  }
 
  .home--blog-roll {
-    //text-align: center;
+    text-align: center;
     
     .post:after {
       text-align: center;
@@ -96,7 +96,7 @@
 
 .article__body > p:last-child:after {
   color: $brand-secondary;
-  content: " \2766"
+  content: url("../../uploads/2013/03/article-icon.svg");
  }
 
 .light-headline {

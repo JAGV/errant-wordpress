@@ -40,11 +40,9 @@ body {
  a {
     @include transition(all 0.75s);
     text-decoration: none;
-    border-bottom: 1px solid;
     color: $brand-secondary;
  }
  a:hover {
-    border-bottom-color: transparent;
     color: $brand-color;
  }
 

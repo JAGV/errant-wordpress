@@ -24,36 +24,6 @@ Template Name: Home Page
     
 <ul class="blog-roll  nav  nav--stacked  home--blog-roll">
 
-<?php
-/**
-global $query_string;
-parse_str( $query_string, $args );
-if(is_home()){
-    $args['posts_per_page'] = 4;
-    query_posts($args);
-
-
-}else{
-    $args['posts_per_page'] = 9;
-    query_posts($args);
-}
-
-
-
-http://wordpress.stackexchange.com/questions/12262/how-to-customize-number-of-blog-posts-on-first-page
-
-    global $query_string;
-    parse_str( $query_string, $args );
-    if(is_home() || is_front_page()){
-        $args['posts_per_page'] = 3;
-        query_posts($args);
-    }else{
-        $args['posts_per_page'] = 9;
-        query_posts($args);  
-**/
-
-?>
-
 <?php 
     $home_query = new WP_Query('posts_per_page=4&offset=0');
     $home_counter=0; 
@@ -71,8 +41,6 @@ http://wordpress.stackexchange.com/questions/12262/how-to-customize-number-of-bl
         <div class="post  post--hero">
         
             <?php Starkers_Utilities::get_template_parts( array('parts/media/media-object') ); ?>
-            
-            <?php // the_excerpt(); ?>
         
         </div><!-- .post -->
         
@@ -96,16 +64,12 @@ http://wordpress.stackexchange.com/questions/12262/how-to-customize-number-of-bl
     
 
 <?php endif; ?><!-- end if(have_posts) -->
-
-<?php // wp_reset_query(); ?>
-<?php // wp_reset_postdata(); // reset the query ?>
-
-
     
 </ul><!-- .blog-roll -->
 </div><!-- .grid-wrap -->
 
-<h3 class="align-center"><a href="<?php bloginfo('url'); ?>/posts/">See all articles</a></h3>
+
+<h3 class="align-center"><a href="<?php bloginfo('url'); ?>/archive/">All Articles</a></h3>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
 
