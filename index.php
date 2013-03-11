@@ -25,25 +25,7 @@
 <!-- begins the loop -->
 <?php
 
-
     $counter = 1;
-
-    //query_posts('offset=4');
-    //$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    //$custom_query = new WP_Query('posts_per_page=9&offset=4');
-    
-    /**
-    $page = get_query_var('paged');
-    $page - (!empty($page) ? $page : 1);
-    $args = array(
-        'paged' => $page,
-        'posts_per_page' => 9,
-        'offset' => 4,
-    );
-
-    query_posts( $args );
-
-    **/
 
     if (have_posts() ) : while (have_posts() ) : the_post(); 
 ?>
