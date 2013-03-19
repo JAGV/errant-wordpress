@@ -60,10 +60,10 @@
  }
 
  .home--blog-roll {
-    text-align: center;
+    text-align: left;
     
     .post:after {
-      text-align: center;
+      text-align: left;
       color: $light-grey;
       content: ". . .";
     }
