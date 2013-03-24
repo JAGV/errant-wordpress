@@ -151,6 +151,7 @@
     /* ========================================================================================================================
     
     Enable SVG file extensions through the media uploader
+
     ======================================================================================================================== */
 
     add_filter('upload_mimes', 'custom_upload_mimes');
@@ -166,3 +167,23 @@
         return $existing_mimes;
 
     }
+
+    
+    
+    
+    /* ========================================================================================================================
+    
+    Shortcodes
+    
+    ======================================================================================================================== */
+    
+    
+    function get_articleEnder($atts) {
+        return '<img class="articleEnder" src="http://www.errantmagazine.ca/wpdev/wp-content/themes/starkers/img/article-icon.svg" />';
+    }
+
+    add_shortcode('endarticle', 'get_articleEnder');
+ 
+
+    
+    

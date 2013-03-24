@@ -94,9 +94,10 @@
     margin-top: 0;
  }
 
-.article__body > p:last-child:after {
-  color: $brand-secondary;
-  content: url("../../uploads/2013/03/article-icon.svg");
+ .articleEnder {
+  display: inline-block;
+  margin-left: 0.25em;
+  margin-top: -0.15em;
  }
 
 .light-headline {
