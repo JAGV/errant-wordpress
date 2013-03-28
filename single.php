@@ -41,6 +41,9 @@
         <ul class="nav  social-icons">
         <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" alt="Facebook">&#62992;</a></li>
         <li><a href="http://twitter.com/share" data-count="horizontal" data-via="SEOHolistically" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" title="Tweet this" target="_blank">&#62993;</a></li>
+        <li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" >
+            &#62995;
+        </a></li>
         </ul><!-- .social-nav -->
     </div><!-- .share-page -->
    
@@ -55,6 +58,9 @@
         <ul class="nav  social-icons">
         <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" alt="Facebook">&#62992;</a></li>
         <li><a href="http://twitter.com/share" data-count="horizontal" data-via="SEOHolistically" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" title="Tweet this" target="_blank">&#62993;</a></li>
+        <li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" >
+            &#62995;
+        </a></li>
         </ul><!-- .social-nav -->
     </div><!-- .share-page -->
 
