@@ -11,8 +11,11 @@
 <?php
     
     $counter = 1;
+    //$currentID = get_the_ID();
 
-    $archive_query = new WP_Query('showposts=4');
+    $archive_query = new WP_Query( array(
+        'showposts'=> 4,
+        'post__not_in'=>array($post->ID)));
     while ($archive_query->have_posts()) : $archive_query->the_post(); 
 ?>
     

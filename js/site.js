@@ -16,7 +16,7 @@
             helpers : {
                     thumbs : {
                         width : 50,
-                        height: 50
+                        height: 35
                     }
             }
         }); // close fancybox
