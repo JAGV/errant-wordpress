@@ -21,6 +21,12 @@
         
     <?php the_post_thumbnail(); ?>
     
+    <?php  if((get_post_meta($post->ID, 'photo-credit', true))) { ?>
+        <p class="photo-credit">
+        <?php echo get_post_meta($post->ID, 'photo-credit', true); ?>
+        </p>
+    <?php } ?>
+    
         
     <p class="post-date"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time( 'j M Y' ); ?></time></p>
     
