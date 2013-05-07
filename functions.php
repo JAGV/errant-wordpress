@@ -179,7 +179,7 @@
     
     
     function get_articleEnder($atts) {
-        return '<img class="articleEnder" src="http://www.errantmagazine.ca/wpdev/wp-content/themes/starkers/img/article-icon.svg" />';
+        return '<img class="articleEnder" src="http://www.errantmagazine.ca/wp-content/themes/starkers/img/article-icon.svg" />';
     }
 
     add_shortcode('endarticle', 'get_articleEnder');
