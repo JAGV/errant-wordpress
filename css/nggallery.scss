@@ -13,6 +13,11 @@ it's only a template design
 @import "susy";
 @import "compass/css3/transition";
 
+/**
+ * This is fucking weird and not cool, should have not used
+ * a different grid to style this gallery
+ */
+
 $total-columns: 12;
 $column-width: 4em;
 $gutter-width: 1em;

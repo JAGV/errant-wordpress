@@ -19,7 +19,7 @@
     <ul class="nav  social-nav  social-icons  clearfix">
         <li><a href="http://www.facebook.com/pages/Errant-Magazine/306037212844290" alt="Facebook">&#62992;</a></li>
         <li><a href="https://twitter.com/ErrantMagazine" alt="Twitter">&#62993;</a></li>
-        <li><a href="#" alt="Google Plus">&#62995;</a></li>
+        <!-- <li><a href="#" alt="Google Plus">&#62995;</a></li> -->
     </ul><!-- .social-nav -->
     </div><!-- .grid-col -->
     
