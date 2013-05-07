@@ -6,7 +6,7 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 		
-		<script type="text/javascript" src="//use.typekit.net/oms6zfq.js"></script>
+		<script type="text/javascript" src="//use.typekit.net/sli8xpk.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 		<!--
