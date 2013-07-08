@@ -14,8 +14,6 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 <div class="article  full-width">
-    
-    
 
     <div class="article__title">
         
@@ -52,10 +50,12 @@
         </a></li>
         </ul><!-- .social-nav -->
     </div><!-- .share-page -->
-   
+
     <div class="article__body">
         
         <?php the_content(); ?>
+        
+        <?php wp_link_pages(); ?>
         
     </div><!-- .article__body -->
     
@@ -74,5 +74,8 @@
 
 <?php endwhile; ?>
 
+
 <?php Starkers_Utilities::get_template_parts( array( 'parts/media/latest-loop','parts/shared/footer','parts/shared/html-footer') ); ?>
+
+
 

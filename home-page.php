@@ -41,6 +41,12 @@ Template Name: Home Page
         <div class="post  post--hero">
         
             <?php Starkers_Utilities::get_template_parts( array('parts/media/media-object') ); ?>
+
+            <div class="excerpt">
+                <?php the_excerpt(); ?>
+            </div><!-- .excerpt -->
+
+            <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">Read More</a>
         
         </div><!-- .post -->
         

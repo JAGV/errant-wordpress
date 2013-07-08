@@ -36,7 +36,7 @@ $categories=get_categories($cat_args);
     $args=array(
       'showposts' => 5,
       'category__in' => array($category->term_id),
-      'caller_get_posts'=>1
+      'ignore_sticky_posts'=>1
     );
     $posts=get_posts($args);
       if ($posts) {
