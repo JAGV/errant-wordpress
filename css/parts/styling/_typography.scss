@@ -81,24 +81,29 @@
 /**
  * Article Title
  */
- .article__title {
+.article__title {
     text-align: center;
+}
+
+.article-subtitle {
+  margin-top: 0;
+  margin-bottom: 0.15em;
  }
 
- .article-author {
+.article-author {
     font-weight: normal;
- }
+}
 
- .article-name, .article-author {
+.article-name, .article-author {
     margin-bottom: 0;
     margin-top: 0;
- }
+}
 
- .articleEnder {
+.articleEnder {
   display: inline-block;
   margin-left: 0.25em;
   margin-top: -0.15em;
- }
+}
 
 .light-headline {
   color: $light-grey;
