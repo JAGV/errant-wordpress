@@ -30,6 +30,11 @@
     
     <h1 class="article-name"><?php the_title(); ?></h1>
     
+    <?php $subtitle = get_post_meta($post->ID, 'subtitle', true); ?>
+    <?php if ($subtitle) : ?>
+        <h2 class="article-subtitle"><?php echo $subtitle; ?></h2>
+    <?php endif; ?>
+    
     <h2 class="article-author">
                 
         <?php
